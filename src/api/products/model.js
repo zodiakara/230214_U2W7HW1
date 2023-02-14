@@ -6,11 +6,11 @@ const ProductsSchema = new Schema(
   {
     name: { type: String, required: true },
     price: { type: Number, required: true },
-    description: { type: String, required: false },
+    description: { type: String, required: true },
   },
   {
     timestamps: true,
   }
 );
 
-export default model;
+export default model("product", ProductsSchema);
